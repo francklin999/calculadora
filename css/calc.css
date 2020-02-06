@@ -1,0 +1,14 @@
+div{
+
+    background: blue;
+    border: solid black 1px;
+    border-radius: 20px;
+    width: 100vw;
+    height: 80vh;
+}
+#visor{
+    border: solid black 1px;
+    border-radius: 20px;
+    width: 100vw;
+    height: 80vh;
+}
