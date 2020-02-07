@@ -1,14 +1,36 @@
-div{
+#corpo{
 
-    background: blue;
+    background: gray;
     border: solid black 1px;
     border-radius: 20px;
     width: 100vw;
-    height: 80vh;
+    height: 70vh;
 }
-#visor{
+*{
+    padding: 0;
+    margin: 0;
+}
+​
+.main{
+    margin: 0 auto;
+}
+#n0{
+    margin-left: 54px;
+}
+.button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.visor{
+    background: rgb(120, 179, 61);
     border: solid black 1px;
-    border-radius: 20px;
-    width: 100vw;
-    height: 80vh;
+    width: 350px;
+    height: 50px;
+    margin-top: 20px;
+}
+#grupoBtn{
+    margin-top: 80px;
+    margin-left: 70px;
 }
