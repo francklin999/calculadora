@@ -19,47 +19,82 @@
                     <form name='form'>
                         <div class="visor" name='textview'>
                     </form>
-                    <table id="grupoBtn">
-                        <td>
-                            <input type="button" class='button btn-danger' onclick='c()' value="C">
-                            <input type="button" class='button' onclick="back()" value="<">
-                            <input type="button" class='button' onclick="insert('/')" value="/">
-                            <input type="button" class='button' onclick="insert('*')" value="*">
+                    <table id="grupoBtn" class="col">
+                        <td class="row">
+                            <div id="operador">
+                                <button type="button" class='button btn-danger' onclick='c()' value="C">C</button>
+                            </div>
+                            <div id="operador">
+                                <button type="button" class='button' onclick="back()" value="%">%</button>
+                            </div>
+                            <div id="operador">
+                                <button type="button" class='button' onclick="insert('/')" value="/">/</button>
+                            </div>
+                            <div id="operador">
+                                <button type="button" class='button' onclick="insert('*')" value="*">*</button>
+                            </div>
                         </td>
                         <tr>
-                            <td>
-                                <input type="button" class='button' onclick="insert(7)" value="7">
-                                <input type="button" class='button' onclick="insert(8)" value="8">
-                                <input type="button" class='button' onclick="insert(9)" value="9">
-                                <input type="button" class='button' onclick="insert('+')" value="+">
+                            <td class="row">
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(7)" value="7">7</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(8)" value="8">8</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(9)" value="9">9</button>
+                                </div>
+                                <div id="operador">
+                                    <button type="button" class='button' onclick="insert('+')" value="+">+</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="button" class='button' onclick="insert(4)" value="4">
-                                <input type="button" class='button' onclick="insert(5)" value="5">
-                                <input type="button" class='button' onclick="insert(6)" value="6">
-                                <input type="button" class='button' onclick="insert('-')" value="-">
+                            <td class="row">
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(4)" value="4">4</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(5)" value="5">5</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(6)" value="6">6</button>
+                                </div>
+                                <div id="operador">
+                                    <button type="button" class='button' onclick="insert('-')" value="-">-</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="button" class='button' onclick="insert(1)" value="1">
-                                <input type="button" class='button' onclick="insert(2)" value="2">
-                                <input type="button" class='button' onclick="insert(3)" value="3">
-                                <input type="button" class='button' onclick='equal()' value="=">
+                            <td class="row">
+                                <div id="numeros">
+                                    <button ype="button" class='button' onclick="insert(1)" value="1">1</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(2)" value="2">2</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type="button" class='button' onclick="insert(3)" value="3">3</button>
+                                </div>
+                                <div id="operador">
+                                    <button  type="button" class='button' onclick='equal()' value="=">=</button>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td>
-                                <input type="hidden">
-                                <input type='button' value='0' onclick="insert(0)" class='button' id='n0'>
-                                <input type='button' value='.' onclick="insert('.')" class='button' id='n0'>
+                            <td class="row">
+                                <div id="numeros">
+                                    <button type='button' value='0' onclick="insert(0)" class='button' id='n0'>0</button>
+                                </div>
+                                <div id="numeros">
+                                    <button type='button' value='.' onclick="insert('.')" class='button' id='n0'>.</button>
+                                </div>
                             </td>
                         </tr>
                         </form>
                 </div>
-        
+
             </div>
         </div>
     </header>

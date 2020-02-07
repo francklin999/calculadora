@@ -31,6 +31,8 @@
     margin-top: 20px;
 }
 #grupoBtn{
+    display: flex;
+    align-content: space-between;
     margin-top: 80px;
     margin-left: 70px;
 }
