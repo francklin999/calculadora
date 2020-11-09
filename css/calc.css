@@ -1,38 +1,129 @@
-#corpo{
+.mainContainer { display: table; width: 100%; } 
+.centralizar { display: table-cell; text-align: center; vertical-align: middle;} 
+.marginAuto { max-width: 650px; margin: 0 auto; } 
 
-    background: gray;
-    border: solid black 1px;
-    border-radius: 20px;
-    width: 100vw;
-    height: 70vh;
+#corpo{
+border: 1px solid gray;
+padding: 10px;
+border-radius: 15px;
+background: #819aaf;
+box-shadow: 5px 5px 10px rgb(94, 92, 92);
 }
-*{
-    padding: 0;
-    margin: 0;
+
+#vlVisor{
+    max-height: 30px;
+    width: 80%;
+    height: 100vh;
+    border-radius: 3px;
+    background: #BCD4D6;
+    font-size: 35px;
+    font-family: 'Sarpanch', sans-serif;
+    text-align: right;
+    padding: 3px 2px 3px;
 }
-​
-.main{
-    margin: 0 auto;
-}
-#n0{
-    margin-left: 54px;
-}
-.button{
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    margin-top: 10px;
-}
-.visor{
-    background: rgb(120, 179, 61);
-    border: solid black 1px;
-    width: 350px;
-    height: 50px;
-    margin-top: 20px;
-}
-#grupoBtn{
+
+#teclado{
     display: flex;
-    align-content: space-between;
-    margin-top: 80px;
-    margin-left: 70px;
+    flex-wrap: wrap;
+}
+
+#numerico{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 55%;
+    padding-left: 0px;
+    vertical-align: middle;
+}
+
+#operadores{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    padding-left: 0px;
+}
+
+li{
+    margin: 3px;
+}
+
+.nums{
+    width: 80px;
+    height: 40px;
+}
+
+.nums:hover{
+    width: 80px;
+    height: 40px;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.nums:active {
+    width: 80px;
+    height: 40px;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#num0{
+    width: 167px;
+    height: 40px;
+}
+
+#num0:hover{
+    width: 167px;
+    height: 40px;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#num0:active {
+    width: 167px;
+    height: 40px;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.oprs{
+    width: 80px;
+    height: 40px;
+}
+
+.oprs:hover{
+    width: 80px;
+    height: 40px;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.oprs:active {
+    width: 80px;
+    height: 40px;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#igual{
+    width: 251px;
+    height: 40px;
+}
+
+#igual:hover{
+    width: 251px;
+    height: 40px;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#igual:active {
+    width: 251px;
+    height: 40px;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }

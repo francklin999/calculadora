@@ -1,115 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sarpanch&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/calc.css">
     <title>Calculadora</title>
 </head>
 
 <body>
-    <header class="container">
-        <div class="row">
-            <div id="corpo" class="col-md-4">
-                <div class='main'>
-                    <form name='form'>
-                        <div class="visor" name='textview'></div>
-                    </form>
-                    <table id="grupoBtn" class="col">
-                        <td class="row">
-                            <div id="clear">
-                                <button type="button" class='button btn-danger' value="C">C</button>
-                            </div>
-                            <div id="operador">
-                                <button type="button" class='button' value="%">%</button>
-                            </div>
-                            <div id="operador">
-                                <button type="button" class='button'  value="/">/</button>
-                            </div>
-                            <div id="operador">
-                                <button type="button" class='button'  value="*">*</button>
-                            </div>
-                        </td>
-                        <tr>
-                            <td class="row">
-                                <div id="numero7">
-                                    <button type="button" class='button' value="7">7</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type="button" class='button'  value="8">8</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type="button" class='button' value="9">9</button>
-                                </div>
-                                <div id="operador">
-                                    <button type="button" class='button' value="+">+</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row">
-                                <div id="numeros">
-                                    <button type="button" class='button' value="4">4</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type="button" class='button' value="5">5</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type="button" class='button' value="6">6</button>
-                                </div>
-                                <div id="operador">
-                                    <button type="button" class='button'  value="-">-</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row">
-                                <div id="numeros">
-                                    <button ype="button" class='button' value="1">1</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type="button" class='button' value="2">2</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type="button" class='button' value="3">3</button>
-                                </div>
-                                <div id="operador">
-                                    <button  type="button" class='button'  value="=">=</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="row">
-                                <div id="numeros">
-                                    <button type='button' value='0'  class='button' id='n0'>0</button>
-                                </div>
-                                <div id="numeros">
-                                    <button type='button' value='.'  class='button' id='n0'>.</button>
-                                </div>
-                            </td>
-                        </tr>
-                        </form>
+    <main class="mainContainer">
+        <div class="centralizar">
+            <div class="marginAuto">
+                <div id="corpo">
+                    <div id="visor">
+                        <input type="text" id="vlVisor" disabled="true" maxlength="7">
+                    </div>
+                    <div id="teclado">
+                        <ul id="numerico">
+                            <li><button class="nums" value="" id="clear">C</button></li>
+                            <li><button class="nums" value="Cos" id="cosseno">Cos(x)</button></li>
+                            <li><button class="nums" value="Sen" id="seno">Sen(x)</button></li>
+                            <li><button class="nums" value="Tan" id="tan">Tan(x)</button></li>
+                            <li><button class="nums" value="9" id="num9">9</button></li>
+                            <li><button class="nums" value="8" id="num8">8</button></li>
+                            <li><button class="nums" value="7" id="num7">7</button></li>
+                            <li><button class="nums" value="6" id="num6">6</button></li>
+                            <li><button class="nums" value="5" id="num5">5</button></li>
+                            <li><button class="nums" value="4" id="num4">4</button></li>
+                            <li><button class="nums" value="3" id="num3">3</button></li>
+                            <li><button class="nums" value="2" id="num2">2</button></li>
+                            <li><button class="nums" value="1" id="num1">1</button></li>
+                            <li><button value="0" id="num0">0</button></li>
+                            <li><button class="nums" value="." id="ponto">.</button></li>
+                        </ul>
+                        <ul id="operadores">
+                            <li><button class="oprs" id="apagar"><img src="img/apagar.png" alt="apagar"></button></li>
+                            <li><button class="oprs" value="÷" id="divisao"><img src="img/divisão.png" alt="divisão"></button></li>
+                            <li><button class="oprs" value="x" id="multiplicacao"><img src="img/multiplicar.png" alt="multiplicar"></button></li>
+                            <li><button class="oprs" value="+" id="soma"><img src="img/mais.png" alt="soma"></button></li>
+                            <li><button class="oprs" value="-" id="subtracao"><img src="img/menos.png" alt="subtracao"></button></li>
+                            <li><button class="oprs" value="%" id="porcentagem"><img src="img/porcentagem.png" alt="porcentagem"></button></li>
+                            <li><button class="oprs" value="√" id="raiz"><img src="img/raiz.png" alt="raiz"></button></li>
+                            <li><button class="oprs" value="Math.PI" id="phi"><img src="img/pi.png" alt="pi"></button></li>
+                            <li><button class="oprs" value="Math.E" id="euler"><img src="img/exp.png" alt="exp"></button></li>
+                            <li><button id="igual" ><img src="img/igual.png" alt="igual"></button></li>
+                        </ul>
+                    </div>
                 </div>
-
             </div>
         </div>
-    </header>
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
+    </main>
     <script src="js/logica.js"></script>
 </body>
 
