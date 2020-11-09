@@ -276,7 +276,8 @@ window.onkeyup = (e) => {
 
     switch (e.keyCode) {
         case 13:
-            let r = vlVisor.value.replaceAll('undefined', '').replaceAll('÷', '').replaceAll('-', '').replaceAll('x', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
+            let r = vlVisor.value.replaceAll('undefined', '').replaceAll('÷', '').replaceAll('-', '').replaceAll('x', '').replaceAll('+', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
+
             if (isNaN(r) || r === '') {
                 vlVisor.value = 'ERRO'
             }
@@ -356,7 +357,7 @@ window.onkeyup = (e) => {
 
 
 resultado.addEventListener('click', () => {
-    let r = vlVisor.value.replaceAll('undefined', '').replaceAll('÷', '').replaceAll('-', '').replaceAll('x', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
+    let r = vlVisor.value.replaceAll('undefined', '').replaceAll('÷', '').replaceAll('+', '').replaceAll('-', '').replaceAll('x', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
     if (isNaN(r) || r === '') {
         vlVisor.value = 'ERRO'
     }
