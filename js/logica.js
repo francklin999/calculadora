@@ -250,6 +250,8 @@ multiplicacao.addEventListener('click', () => {
 })
 clear.addEventListener('click', () => {
     vlVisor.value = '';
+ valor2 = '';
+ valor1 = ''
 })
 porcentagem.addEventListener('click', () => {
     if (vlVisor.value.includes('%')) {
