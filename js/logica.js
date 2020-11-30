@@ -278,7 +278,7 @@ window.onkeyup = (e) => {
 
     switch (e.keyCode) {
         case 13:
-            let r = vlVisor.value.replaceAll('undefined', '').replaceAll('÷', '').replaceAll('-', '').replaceAll('x', '').replaceAll('+', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
+            let r = vlVisor.value.replaceAll('NaN', '').replaceAll('undefined', '').replaceAll('÷', '').replaceAll('-', '').replaceAll('x', '').replaceAll('+', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
 
             if (isNaN(r) || r === '') {
                 vlVisor.value = 'ERRO'
@@ -315,7 +315,11 @@ window.onkeyup = (e) => {
                 valor2 = ''
                 valor2 = vlVisor.value.substring(vlVisor.value.indexOf('x') + 1, vlVisor.value.length);
                 vlVisor.value = ''
-                vlVisor.value = parseFloat(valor1, 10) * parseFloat(valor2, 10)
+                if (valor2 === '') {
+                    vlVisor.value = 'ERRO'
+                }else{
+                    vlVisor.value = parseFloat(valor1, 10) * parseFloat(valor2, 10);        
+                }
             } else if (vlVisor.value.includes('%')) {
                 valor2 = ''
                 valor2 = vlVisor.value.substring(vlVisor.value.indexOf('%') + 1, vlVisor.value.length);
@@ -359,7 +363,7 @@ window.onkeyup = (e) => {
 
 
 resultado.addEventListener('click', () => {
-    let r = vlVisor.value.replaceAll('undefined', '').replaceAll('÷', '').replaceAll('+', '').replaceAll('-', '').replaceAll('x', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
+    let r = vlVisor.value.replaceAll('NaN', '').replaceAll('undefined', '').replaceAll('÷', '').replaceAll('-', '').replaceAll('x', '').replaceAll('+', '').replaceAll('√', '').replaceAll('÷', '').replaceAll('%', '').replaceAll('Sen', '').replaceAll('Cos', '').replaceAll('Tan', '');
     if (isNaN(r) || r === '') {
         vlVisor.value = 'ERRO'
     }
@@ -380,6 +384,7 @@ resultado.addEventListener('click', () => {
     } else if (vlVisor.value.includes('+')) {
         valor2 = ''
         valor2 = vlVisor.value.substring(vlVisor.value.indexOf('+') + 1, vlVisor.value.length);
+        valor2 = valor2 || 0;
         vlVisor.value = '';
         vlVisor.value = parseFloat(valor1, 10) + parseFloat(valor2, 10)
     } else if (vlVisor.value.includes('√')) {
@@ -389,20 +394,30 @@ resultado.addEventListener('click', () => {
         if (valor1 === '') {
             valor2 === '' ? vlVisor.value = "ERRO" : vlVisor.value = Math.sqrt(parseFloat(valor2, 10));
         } else {
-            vlVisor.value = parseFloat(valor1, 10) * Math.sqrt(parseFloat(valor2, 10))
+            if (valor2 === '') {
+                vlVisor.value = 'ERRO'
+            }else{     
+                vlVisor.value = parseFloat(valor1, 10) * Math.sqrt(parseFloat(valor2, 10))
+            }
         }
     } else if (vlVisor.value.includes('x')) {
         valor2 = ''
         valor2 = vlVisor.value.substring(vlVisor.value.indexOf('x') + 1, vlVisor.value.length);
         vlVisor.value = '';
-        vlVisor.value = parseFloat(valor1, 10) * parseFloat(valor2, 10);
+        if (valor2 === '') {
+            vlVisor.value = 'ERRO'
+        }else{
+            vlVisor.value = parseFloat(valor1, 10) * parseFloat(valor2, 10);        
+        }
     } else if (vlVisor.value.includes('%')) {
         valor2 = ''
         valor2 = vlVisor.value.substring(vlVisor.value.indexOf('%') + 1, vlVisor.value.length);
         vlVisor.value = ''
         if (valor1 === '') {
+            valor2 = valor2 || 0;
             valor2 === '' ? vlVisor.value = "ERRO" : vlVisor.value = parseFloat(valor2, 10) / 100;
         } else {
+            valor2 = valor2 || 1;
             vlVisor.value = parseFloat(valor1, 10) * (parseFloat(valor2, 10) / 100);
         }
     } else if (vlVisor.value.includes('Cos')) {
@@ -410,6 +425,7 @@ resultado.addEventListener('click', () => {
         valor2 = vlVisor.value.substring(vlVisor.value.indexOf('s') + 1, vlVisor.value.length);
         vlVisor.value = ''
         if (valor1 === '') {
+            valor2 = valor2 || 0;
             valor2 === '' ? vlVisor.value = "ERRO" : vlVisor.value = Math.cos(parseFloat(valor2, 10));
         } else {
             vlVisor.value = parseFloat(valor1, 10) * Math.cos(parseFloat(valor2, 10));
